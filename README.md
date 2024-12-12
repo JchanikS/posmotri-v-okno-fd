@@ -1,2 +1,2 @@
 README.md
-https://github.com/JchanikS/posmotri-v-okno-fd
+https://github.com/JchanikS/posmotri_v_okno-fd
