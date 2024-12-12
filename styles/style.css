@@ -38,11 +38,13 @@ ol {
 }
 
 .content {
+  padding-top: 200px;
   display: grid;
   align-items: end;
   gap: 30px;
   grid-template-columns: 711px 399px;
   grid-template-areas: 'result content__details';
+  
 }
 
 /* Блок видео */
@@ -202,7 +204,7 @@ ol {
 }
 
 .title {
-  font-family:  Arial, sans-serif;
+  font-family:  Oswald , Arial, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 0.94;
@@ -250,7 +252,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family:  Arial, sans-serif;
+  font-family:  Oswald , Arial, sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
