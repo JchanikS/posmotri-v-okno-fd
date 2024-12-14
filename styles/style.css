@@ -16,6 +16,7 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  place-items: center ;
 }
 
 h1,
@@ -38,13 +39,15 @@ ol {
 }
 
 .content {
-  padding-top: 250px;
   display: grid;
-  align-items: end;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: auto;
   gap: 30px;
   grid-template-columns: 711px 399px;
   grid-template-areas: 'result content__details';
-  justify-items: center;
+ 
   
 }
 
@@ -123,7 +126,7 @@ ol {
 
 .button {
   background: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   color: #fff;
   text-align: center;
   font-family: 'Fira Sans Condensed', Arial, sans-serif;
@@ -182,7 +185,7 @@ ol {
 /* Под кнопкой при нажатии нет подчёркивания */
 
 .button:active,
-.content__list-item:active {
+.content__card-link:active {
   background: #545050;
   text-decoration: none;
 }
@@ -201,6 +204,7 @@ ol {
   display: flex;
   flex-direction: column;
   block-size: 100%;
+  justify-content: center;
   gap: 26px;
 }
 
@@ -230,6 +234,7 @@ ol {
   display: block;
   color: #fff;
   text-decoration: none;
+  outline-offset: 2px;
 }
 
 .content__card-link:active {
@@ -259,6 +264,12 @@ ol {
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
+  max-width: 196px;
+  width: 100%;
+  flex-shrink: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -275,7 +286,6 @@ ol {
   display: block;
 }
 
-.result__video-container,
 .content__list {
   position: relative;
 }
