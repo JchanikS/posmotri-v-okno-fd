@@ -16,7 +16,6 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  place-items: center ;
 }
 
 h1,
@@ -40,20 +39,22 @@ ol {
 
 .content {
   display: grid;
-  align-items: center;
+  align-content: center;
+  align-items: end;
   justify-content: center;
   height: 100%;
+  max-height: 800px;
   margin: auto;
   gap: 30px;
   grid-template-columns: 711px 399px;
   grid-template-areas: 'result content__details';
- 
   
 }
 
 /* Блок видео */
 
 .result__video-container {
+  position: relative;
   inline-size: 711px;
   block-size: 386px;
   margin-block-end: 16px;
@@ -70,12 +71,13 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
 }
 
 .search-form__fieldset {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   border: none;
 }
 
@@ -90,7 +92,7 @@ ol {
 .search-form__label {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
   cursor: pointer;
 }
 
@@ -220,21 +222,22 @@ ol {
   color: #545050;
 }
 
-.content__list {
+.content__list ,
+ content__list-item {
+  position: relative;
   max-inline-size: 399px;
-  block-size: 298px;
   overflow-y: auto;
-}
-
-.content__list-item {
-  margin-block-end: 30px;
+  max-height: 298px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .content__card-link {
   display: block;
   color: #fff;
   text-decoration: none;
-  outline-offset: 2px;
+  margin: 2px;
 }
 
 .content__card-link:active {
@@ -284,10 +287,6 @@ ol {
   object-fit: cover;
   object-position: center;
   display: block;
-}
-
-.content__list {
-  position: relative;
 }
 
 .more-button {
