@@ -16,6 +16,8 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: grid;
+  align-content: center;
 }
 
 h1,
@@ -43,12 +45,10 @@ ol {
   align-items: end;
   justify-content: center;
   height: 100%;
-  max-height: 800px;
   margin: auto;
   gap: 30px;
   grid-template-columns: 711px 399px;
   grid-template-areas: 'result content__details';
-  
 }
 
 /* Блок видео */
@@ -203,11 +203,13 @@ ol {
 
 .content__details {
   grid-area: content__details;
+  position: relative;
   display: flex;
   flex-direction: column;
   block-size: 100%;
-  justify-content: center;
   gap: 26px;
+  overflow: hidden; 
+  height: 535.5px;
 }
 
 .title {
@@ -222,17 +224,18 @@ ol {
   color: #545050;
 }
 
-.content__list ,
- content__list-item {
+.content__list  {
   position: relative;
   max-inline-size: 399px;
+  max-width: 399px;
   overflow-y: auto;
   max-height: 298px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
-
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 30px;
+}
 .content__card-link {
   display: block;
   color: #fff;
@@ -290,8 +293,8 @@ ol {
 }
 
 .more-button {
-  min-inline-size: 389px;
   margin: 2px;
+  width: calc(100% - 4px);
 }
 
 .visually-hidden {
