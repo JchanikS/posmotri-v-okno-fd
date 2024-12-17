@@ -16,8 +16,6 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  display: grid;
-  align-content: center;
 }
 
 h1,
@@ -49,6 +47,7 @@ ol {
   gap: 30px;
   grid-template-columns: 711px 399px;
   grid-template-areas: 'result content__details';
+  inline-size: 100%;
 }
 
 /* Блок видео */
@@ -79,6 +78,7 @@ ol {
   flex-direction: column;
   gap: 6px;
   border: none;
+  inline-size: 100%;
 }
 
 .search-form__fieldset-title {
@@ -208,8 +208,6 @@ ol {
   flex-direction: column;
   block-size: 100%;
   gap: 26px;
-  overflow: hidden; 
-  height: 535.5px;
 }
 
 .title {
@@ -229,7 +227,7 @@ ol {
   max-inline-size: 399px;
   max-width: 399px;
   overflow-y: auto;
-  max-height: 298px;
+  height: 298px;
   display: flex;
   flex-direction: column;
 }
